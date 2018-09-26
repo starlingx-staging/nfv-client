@@ -1,0 +1,5 @@
+%global _sysconfdir '/usr/local/etc'
+# nfv-client
+install -d -m 755 %{buildroot}%{_sysconfdir}/bash_completion.d
+install -m 444 nfv/nfv-client/scripts/sw-manager.completion %{buildroot}%{_sysconfdir}/bash_completion.d/sw-manager
+%clean
